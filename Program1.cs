@@ -1,10 +1,20 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-class Program1
+namespace ConsoleApplication1
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("5\n10\n21");//вывод на экран чисел в столбик
-        Console.ReadKey();//ожидание нажатия клавиши
+        static void Main(string[] args)
+        {
+            long result;//обьявление переменной
+            const long km = 149800000;// расстояние в км.
+
+            result = km * 1000 * 100;//присвоение значения переменной после математических операций
+            Console.WriteLine(result);//вывод на экран переменной
+            Console.ReadLine();//ожидание нажатия клавиши
+        }
     }
 }
