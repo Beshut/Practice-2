@@ -1,16 +1,25 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-class Program3
+namespace ConsoleApplication1
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.Write("Введите сколько месяцев прошло: ");//вывод на экран сообщения пользователю
-        var n = int.Parse(Console.ReadLine());//обьявление переменной, присваивание значения типа int, введение значения переменной пользователем
-        if (n > 11)//условный оператор, выполняется если n > 11
-            while (n > 11)//условный оператор, выполняется пока n > 11
-                n = n - 12;//присваивание переменной n нового значения
-        int x = n + 1;//обьявление переменной, присваивание значения типа int, выполнение математической операции
-        Console.WriteLine("Сейчас {0}-й месяц", x);//вывод на экран номера месяца
-        Console.ReadKey();//ожидание нажатия клавиши
+        static void Main(string[] args)
+        {
+            short num1, num2;//обьявление переменных
+            num1 = 10;//присвоение значения перемнной
+            num2 = 15;//присвоение значения перемнной
+
+            Console.WriteLine("{0} + {1} = {2}", num1, num2, Sum(num1, num2));//вывод на экран сообщения пользователю
+            Console.ReadLine();//ожидание нажатия клавиши
+        }
+
+        static int Sum(int x, int y)//создание собственной функции
+        {
+            return x + y;//процесс выполнения функции
+        }
     }
 }
